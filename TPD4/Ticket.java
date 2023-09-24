@@ -3,7 +3,7 @@ import java.util.Date;
 /**
  * Ticket is a class that contains the framework for a Ticket object. The ticket object contains information about
  * the price, the event, the seat, and the date, among other attributes. Ticket uses java.util.Date to provide the
- * information for the ticket's date
+ * information for the ticket's date.
  * <p></p>
  * Ticket is comparable... For now...
  * <p></p>
@@ -103,8 +103,11 @@ public class Ticket implements Comparable <Ticket> {
         if ((this.getPrice() - o.getPrice() > 0)) {
             return 1;
         }
-        else {
+        if ((this.getPrice() - o.getPrice() == 0)) {
             return 0;
+        }
+        else {
+            return -1;
         }
     }
 }
