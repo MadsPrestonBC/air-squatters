@@ -42,6 +42,11 @@ public class Ticket implements Comparable <Ticket> {
      */
     private boolean available;
 
+    /**
+     * Account indicating the owner of the ticket
+     */
+    private Account owner;
+
 
     /**
      * Default constructor for Ticket
@@ -55,6 +60,7 @@ public class Ticket implements Comparable <Ticket> {
         this.eventDate = new Date();
         this.handicapAccessible = false;
         this.available = false;
+        this.owner = new Account();
     }
 
     /**
@@ -66,9 +72,10 @@ public class Ticket implements Comparable <Ticket> {
      * @param eventDate the date of the event
      * @param handicapAccessible handicap accessibility of the seat
      * @param available the availability of the ticket
+     * @param owner the owner of the ticket
      */
     public Ticket(double price, int seatNumber, char section, String event, Date eventDate,
-                  boolean handicapAccessible, boolean available) {
+                  boolean handicapAccessible, boolean available, Account owner) {
         this.price = price;
         this.seatNumber = seatNumber;
         this.section = section;
@@ -76,6 +83,7 @@ public class Ticket implements Comparable <Ticket> {
         this.eventDate = eventDate;
         this.handicapAccessible = handicapAccessible;
         this.available = available;
+        this.owner = owner;
     }
 
     /**
@@ -188,6 +196,22 @@ public class Ticket implements Comparable <Ticket> {
      */
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+
+    /**
+     * Returns the owner of the ticket
+     * @return the owner of the ticket
+     */
+    public Account getOwner() {
+        return owner;
+    }
+
+    /**
+     * Sets an owner for the ticket
+     * @param owner the owner of the ticket
+     */
+    public void setOwner(Account owner) {
+        this.owner = owner;
     }
 
     /**
