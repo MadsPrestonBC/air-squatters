@@ -14,4 +14,8 @@ public class Event {
     private Date date;
     private String location;
 
+    public String getEventType() {
+        return this.eventType;
+    }
+
 }
