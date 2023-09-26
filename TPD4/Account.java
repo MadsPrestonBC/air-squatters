@@ -50,6 +50,16 @@ class Account {
     }
 
     /*
+     * @brief Resets the cofc ID
+     * @param cofcID: a new College of Charleston ID to override the old ID
+     * @return n/a
+     */
+
+    public void setCofcID(int cofcID) {
+        this.cofcID = cofcID;
+    }
+
+    /*
      * @brief Returns the user's password
      * @param n/a
     * @return password
@@ -60,6 +70,16 @@ class Account {
     }
 
     /*
+     * @brief Resets the user's password
+     * @param password: a new password for the user's account
+     * @return n/a
+     */
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    /*
      * @brief Returns the user's email
      * @param n/a
      * @return email
@@ -67,6 +87,16 @@ class Account {
 
     public String getEmail() {
         return this.email;
+    }
+
+    /*
+     * @brief Resets the user's email
+     * @param email: the new email for the user's account
+     * @return n/a
+     */
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     /*
@@ -87,36 +117,6 @@ class Account {
     }
 
     /*
-     * @brief Resets the cofc ID
-     * @param cofcID: a new College of Charleston ID to override the old ID
-     * @return n/a
-     */
-
-    public void setCofcID(int cofcID) {
-        this.cofcID = cofcID;
-    }
-
-    /*
-     * @brief Resets the user's password
-     * @param password: a new password for the user's account
-     * @return n/a
-     */
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    /*
-     * @brief Resets the user's email
-     * @param email: the new email for the user's account
-     * @return n/a
-     */
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /*
      * @brief Adds a ticket the user's account
      * @param ticket: will be a ticket object to be added, but is a string for now
      * @return none
@@ -125,6 +125,7 @@ class Account {
     public void setTickets(Ticket ticket) {
         this.tickets.add(ticket);
     }
+
 
     public static void main(String[] args) {
         Account first = new Account();
