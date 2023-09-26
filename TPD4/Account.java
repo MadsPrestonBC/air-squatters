@@ -15,13 +15,13 @@ class Account {
     private int cofcID;
     private String password;
     private String email;
-    private LinkedList<String> tickets;
+    private LinkedList<Ticket> tickets;
 
     public Account() {
         cofcID = 0;
         password = "";
         email = "";
-        tickets = new LinkedList<String>();
+        tickets = new LinkedList<Ticket>();
     }
 
     /*
@@ -36,7 +36,7 @@ class Account {
         this.cofcID = cofcID;
         this.password = password;
         this.email = email;
-        tickets = new LinkedList<String>();
+        tickets = new LinkedList<Ticket>();
     }
 
     /*
@@ -67,6 +67,23 @@ class Account {
 
     public String getEmail() {
         return this.email;
+    }
+
+    /*
+     * @brief Prints tickets to the console and reutrns all tickets
+     * @param n/a
+     * @return tickets: a list of all tickets tied to the user
+     */
+
+    public LinkedList<Ticket> getTickets() {
+        this.setTickets(new Ticket(1.0, 36,'b', "HomeGame", new Date(), false, true, this));
+        String[] ticketArray = new String[tickets.size()];
+        for(int i = 0; i < ticketArray.length; i++) {
+            ticketArray[i] = tickets.get(i).toString();
+            System.out.print(ticketArray[i] + " ");
+        }
+
+        return tickets;
     }
 
     /*
@@ -105,25 +122,8 @@ class Account {
      * @return none
      */
 
-    public void setTickets(String ticket) {
+    public void setTickets(Ticket ticket) {
         this.tickets.add(ticket);
-    }
-
-    /*
-     * @brief Prints tickets to the console and reutrns all tickets
-     * @param n/a
-     * @return tickets: a list of all tickets tied to the user
-     */
-
-    public LinkedList<String> getTickets() {
-        this.setTickets("Noah Kahan");
-        String[] ticketArray = new String[tickets.size()];
-        for(int i = 0; i < ticketArray.length; i++) {
-            ticketArray[i] = tickets.get(i);
-            System.out.print(ticketArray[i] + " ");
-        }
-
-        return tickets;
     }
 
     public static void main(String[] args) {
