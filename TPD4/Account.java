@@ -15,13 +15,13 @@ class Account {
     private int cofcID;
     private String password;
     private String email;
-    private LinkedList<String> tickets;
+    private LinkedList<Ticket> tickets;
 
     public Account() {
         cofcID = 0;
         password = "";
         email = "";
-        tickets = new LinkedList<String>();
+        tickets = new LinkedList<Ticket>();
     }
 
     /*
@@ -36,7 +36,7 @@ class Account {
         this.cofcID = cofcID;
         this.password = password;
         this.email = email;
-        tickets = new LinkedList<String>();
+        tickets = new LinkedList<Ticket>();
     }
 
     /*
@@ -50,26 +50,6 @@ class Account {
     }
 
     /*
-     * @brief Returns the user's password
-     * @param n/a
-    * @return password
-    */
-
-    public String getPassword() {
-        return this.password;
-    }
-
-    /*
-     * @brief Returns the user's email
-     * @param n/a
-     * @return email
-     */
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    /*
      * @brief Resets the cofc ID
      * @param cofcID: a new College of Charleston ID to override the old ID
      * @return n/a
@@ -77,6 +57,16 @@ class Account {
 
     public void setCofcID(int cofcID) {
         this.cofcID = cofcID;
+    }
+
+    /*
+     * @brief Returns the user's password
+     * @param n/a
+    * @return password
+    */
+
+    public String getPassword() {
+        return this.password;
     }
 
     /*
@@ -90,6 +80,16 @@ class Account {
     }
 
     /*
+     * @brief Returns the user's email
+     * @param n/a
+     * @return email
+     */
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    /*
      * @brief Resets the user's email
      * @param email: the new email for the user's account
      * @return n/a
@@ -100,31 +100,32 @@ class Account {
     }
 
     /*
-     * @brief Adds a ticket the user's account
-     * @param ticket: will be a ticket object to be added, but is a string for now
-     * @return none
-     */
-
-    public void setTickets(String ticket) {
-        this.tickets.add(ticket);
-    }
-
-    /*
      * @brief Prints tickets to the console and reutrns all tickets
      * @param n/a
      * @return tickets: a list of all tickets tied to the user
      */
 
-    public LinkedList<String> getTickets() {
-        this.setTickets("Noah Kahan");
+    public LinkedList<Ticket> getTickets() {
+        this.setTickets(new Ticket(1.0, 36,'b', "HomeGame", new Date(), false, true, this));
         String[] ticketArray = new String[tickets.size()];
         for(int i = 0; i < ticketArray.length; i++) {
-            ticketArray[i] = tickets.get(i);
+            ticketArray[i] = tickets.get(i).toString();
             System.out.print(ticketArray[i] + " ");
         }
 
         return tickets;
     }
+
+    /*
+     * @brief Adds a ticket the user's account
+     * @param ticket: will be a ticket object to be added, but is a string for now
+     * @return none
+     */
+
+    public void setTickets(Ticket ticket) {
+        this.tickets.add(ticket);
+    }
+
 
     public static void main(String[] args) {
         Account first = new Account();
