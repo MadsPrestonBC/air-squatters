@@ -14,6 +14,10 @@ import java.util.Date;
  **/
 public class Ticket implements Comparable <Ticket> {
     /**
+     * int containing the ticket number of the ticket
+     */
+    private int ticketNumber;
+    /**
      * double containing the price of the ticket
      */
     private double price;
@@ -47,12 +51,12 @@ public class Ticket implements Comparable <Ticket> {
      */
     private Account owner;
 
-
     /**
      * Default constructor for Ticket
      *
      */
     public Ticket() {
+        this.ticketNumber = 0;
         this.price = 0.0;
         this.seatNumber = 0;
         this.section = 'a';
@@ -65,6 +69,7 @@ public class Ticket implements Comparable <Ticket> {
 
     /**
      * Constructor for a Ticket object
+     * @param ticketNumber the ticket number of the ticket
      * @param price the price of the ticket
      * @param seatNumber the seat number of the ticket
      * @param section the section the seat is in
@@ -74,8 +79,9 @@ public class Ticket implements Comparable <Ticket> {
      * @param available the availability of the ticket
      * @param owner the owner of the ticket
      */
-    public Ticket(double price, int seatNumber, char section, String event, Date eventDate,
+    public Ticket(int ticketNumber, double price, int seatNumber, char section, String event, Date eventDate,
                   boolean handicapAccessible, boolean available, Account owner) {
+        this.ticketNumber = ticketNumber;
         this.price = price;
         this.seatNumber = seatNumber;
         this.section = section;
@@ -86,6 +92,21 @@ public class Ticket implements Comparable <Ticket> {
         this.owner = owner;
     }
 
+    /**
+     * Returns the ticket number of the ticket
+     * @return the ticket number of the ticket
+     */
+    public int setTicketNumber() {
+        return this.ticketNumber;
+    }
+
+    /**
+     * Sets the ticket number of the ticket
+     * @param ticketNumber ticker number for the ticket
+     */
+    public void setTicketNumber(int ticketNumber) {
+        this.ticketNumber = ticketNumber;
+    }
     /**
      * Returns the price of the ticket
      * @return the price of the ticket
