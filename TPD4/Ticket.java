@@ -17,15 +17,12 @@ public class Ticket implements Comparable <Ticket> {
      * int containing the ticket number of the ticket
      */
     private int ticketNumber;
-    /**
-     * double containing the price of the ticket
-     */
 
-    private String event;
     /**
-     * Date containing the date of the event the ticket is for
+     * Event containing the event
      */
-    private Date eventDate;
+    private Event event;
+
     /**
      * boolean indicating if the seat is handicap accessible
      */
@@ -48,9 +45,7 @@ public class Ticket implements Comparable <Ticket> {
      */
     public Ticket() {
         this.ticketNumber = 0;
-        this.price = 0.0;
-        this.event = "";
-        this.eventDate = new Date();
+        this.event = new Event();
         this.handicapAccessible = false;
         this.available = false;
         this.owner = new Account();
@@ -61,19 +56,15 @@ public class Ticket implements Comparable <Ticket> {
      * Constructor for a Ticket object
      * @param ticketNumber the ticket number of the ticket
      * @param price the price of the ticket
-
      * @param event the event the ticket is for
-     * @param eventDate the date of the event
      * @param handicapAccessible handicap accessibility of the seat
      * @param available the availability of the ticket
      * @param owner the owner of the ticket
      */
-    public Ticket(int ticketNumber, double price, String event, Date eventDate,
+    public Ticket(int ticketNumber, double price, Event event,
                   boolean handicapAccessible, boolean available, Account owner, Seat seat) {
         this.ticketNumber = ticketNumber;
-        this.price = price;
         this.event = event;
-        this.eventDate = eventDate;
         this.handicapAccessible = handicapAccessible;
         this.available = available;
         this.owner = owner;
@@ -95,27 +86,12 @@ public class Ticket implements Comparable <Ticket> {
     public void setTicketNumber(int ticketNumber) {
         this.ticketNumber = ticketNumber;
     }
-    /**
-     * Returns the price of the ticket
-     * @return the price of the ticket
-     */
-    public double getPrice() {
-        return this.price;
-    }
-
-    /**
-     * Sets a new price for the ticket
-     * @param price the new price of the ticket
-     */
-    public void setPrice(float price) {
-        this.price = price;
-    }
 
     /**
      * Returns the event the ticket is for
      * @return the event the ticket is for
      */
-    public String getEvent() {
+    public Event getEvent() {
         return this.event;
     }
 
@@ -123,25 +99,10 @@ public class Ticket implements Comparable <Ticket> {
      * Sets a new event for the ticket
      * @param event the new event for the ticket
      */
-    public void setEvent(String event) {
+    public void setEvent(Event event) {
         this.event = event;
     }
 
-    /**
-     * Returns the date of the event the ticket is for
-     * @return the date of the event the ticket is for
-     */
-    public Date getEventDate() {
-        return this.eventDate;
-    }
-
-    /**
-     * Sets a new date for the event the ticket is for
-     * @param eventDate the new date of the event
-     */
-    public void setEventDate(Date eventDate) {
-        this.eventDate = eventDate;
-    }
 
     /**
      * Returns the handicap accessibility of the ticket
@@ -214,7 +175,7 @@ public class Ticket implements Comparable <Ticket> {
      */
     @Override
     public String toString() {
-        return "A ticket for " + this.getEvent() + " on " + this.getEventDate();
+        return "A ticket for " + this.getEvent() + " on " + this.event.getDate();
     }
 
     /**

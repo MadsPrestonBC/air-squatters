@@ -18,4 +18,8 @@ public class Event {
         return this.eventType;
     }
 
+    public Date getDate() {
+        return this.date;
+    }
+
 }
