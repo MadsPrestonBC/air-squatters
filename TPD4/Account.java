@@ -2,7 +2,7 @@ import java.util.*;
 
 /**
  * Account is the class for all accounts within the application. It requires a CofC ID 
- * integer, a password, a valid email and a birthday. It will have a LinkedList to 
+ * integer, a password, and a valid email. It will have a LinkedList to 
  * contain all tickets purchased with the account. 
  * <p></p>
  * @author Joshua Keifer
