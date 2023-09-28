@@ -106,7 +106,6 @@ class Account {
      */
 
     public LinkedList<Ticket> getTickets() {
-        this.setTickets(new Ticket(1.0, 36,'b', "HomeGame", new Date(), false, true, this));
         String[] ticketArray = new String[tickets.size()];
         for(int i = 0; i < ticketArray.length; i++) {
             ticketArray[i] = tickets.get(i).toString();
