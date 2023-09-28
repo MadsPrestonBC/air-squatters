@@ -100,7 +100,7 @@ class Account {
     }
 
     /*
-     * @brief Prints tickets to the console and reutrns all tickets
+     * @brief Prints tickets to the console and returns all tickets
      * @param n/a
      * @return tickets: a list of all tickets tied to the user
      */

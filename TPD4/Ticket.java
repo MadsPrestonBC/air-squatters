@@ -14,20 +14,13 @@ import java.util.Date;
  **/
 public class Ticket implements Comparable <Ticket> {
     /**
+     * int containing the ticket number of the ticket
+     */
+    private int ticketNumber;
+    /**
      * double containing the price of the ticket
      */
-    private double price;
-    /**
-     * int containing the seat number of the ticket
-     */
-    private int seatNumber;
-    /**
-     * char containing the section of the ticket's seat
-     */
-    private char section;
-    /**
-     * String containing the event the ticket is for
-     */
+
     private String event;
     /**
      * Date containing the date of the event the ticket is for
@@ -47,45 +40,61 @@ public class Ticket implements Comparable <Ticket> {
      */
     private Account owner;
 
+    private Seat seat;
 
     /**
      * Default constructor for Ticket
      *
      */
     public Ticket() {
+        this.ticketNumber = 0;
         this.price = 0.0;
-        this.seatNumber = 0;
-        this.section = 'a';
         this.event = "";
         this.eventDate = new Date();
         this.handicapAccessible = false;
         this.available = false;
         this.owner = new Account();
+        this.seat = new Seat();
     }
 
     /**
      * Constructor for a Ticket object
+     * @param ticketNumber the ticket number of the ticket
      * @param price the price of the ticket
-     * @param seatNumber the seat number of the ticket
-     * @param section the section the seat is in
+
      * @param event the event the ticket is for
      * @param eventDate the date of the event
      * @param handicapAccessible handicap accessibility of the seat
      * @param available the availability of the ticket
      * @param owner the owner of the ticket
      */
-    public Ticket(double price, int seatNumber, char section, String event, Date eventDate,
-                  boolean handicapAccessible, boolean available, Account owner) {
+    public Ticket(int ticketNumber, double price, String event, Date eventDate,
+                  boolean handicapAccessible, boolean available, Account owner, Seat seat) {
+        this.ticketNumber = ticketNumber;
         this.price = price;
-        this.seatNumber = seatNumber;
-        this.section = section;
         this.event = event;
         this.eventDate = eventDate;
         this.handicapAccessible = handicapAccessible;
         this.available = available;
         this.owner = owner;
+        this.seat = seat;
     }
 
+    /**
+     * Returns the ticket number of the ticket
+     * @return the ticket number of the ticket
+     */
+    public int setTicketNumber() {
+        return this.ticketNumber;
+    }
+
+    /**
+     * Sets the ticket number of the ticket
+     * @param ticketNumber ticker number for the ticket
+     */
+    public void setTicketNumber(int ticketNumber) {
+        this.ticketNumber = ticketNumber;
+    }
     /**
      * Returns the price of the ticket
      * @return the price of the ticket
@@ -100,38 +109,6 @@ public class Ticket implements Comparable <Ticket> {
      */
     public void setPrice(float price) {
         this.price = price;
-    }
-
-    /**
-     * Returns the seat number of the ticket
-     * @return the seat number of the ticket
-     */
-    public int getSeatNumber() {
-        return this.seatNumber;
-    }
-
-    /**
-     * Sets a new seat number for the ticket
-     * @param seatNumber the new seat number for the ticket
-     */
-    public void setSeatNumber(int seatNumber) {
-        this.seatNumber = seatNumber;
-    }
-
-    /**
-     * Returns the section where the seat is located
-     * @return the section where the seat is located
-     */
-    public char getSection() {
-        return this.section;
-    }
-
-    /**
-     * Sets a new section for the seat of the ticket
-     * @param section the new section
-     */
-    public void setSection(char section) {
-        this.section = section;
     }
 
     /**
@@ -215,6 +192,23 @@ public class Ticket implements Comparable <Ticket> {
     }
 
     /**
+     * Returns the seat that the ticket is for
+     * @return the seat that the ticket is for
+     */
+    public Seat getSeat() {
+        return this.seat;
+    }
+
+    /**
+     * Sets a seat for the ticket
+     * @param seat the seat for the ticket
+     */
+    public void setSeat(Seat seat) {
+        this.seat = seat;
+    }
+
+
+    /**
      * Overridden toString method
      * @return a String indicating what event the ticket is for and when it is
      */
@@ -234,10 +228,10 @@ public class Ticket implements Comparable <Ticket> {
     @Override
     public int compareTo(Ticket o) {
         // TODO FIGURE OUT HOW TO IMPLEMENT
-        if ((this.getPrice() - o.getPrice() > 0)) {
+        if ((this.seat.getPrice() - o.seat.getPrice() > 0)) {
             return 1;
         }
-        if ((this.getPrice() - o.getPrice() == 0)) {
+        if ((this.seat.getPrice() - o.seat.getPrice() == 0)) {
             return 0;
         }
         else {
