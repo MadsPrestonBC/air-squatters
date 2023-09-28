@@ -4,7 +4,7 @@ public class TicketSystem {
 
     private LinkedList<Ticket> cart;
     private Account activeAccount;
-    boolean loggedIn;
+    private boolean loggedIn = false;
 
     // TODO FILL STUFF OUT
     public void checkUserPass(int cofcID, String password) {
@@ -12,8 +12,8 @@ public class TicketSystem {
     }
 
     // TODO FILL STUFF OUT
-    public boolean processPayment() {
-
+    public boolean Payment() {
+        return true;
     }
     // TODO FILL STUFF OUT
     public void createReceipt() {
