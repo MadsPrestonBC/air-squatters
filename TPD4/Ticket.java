@@ -17,9 +17,6 @@ public class Ticket implements Comparable <Ticket> {
      * int containing the ticket number of the ticket
      */
     private int ticketNumber;
-    /**
-     * double containing the price of the ticket
-     */
 
     private String event;
     /**
