@@ -4,10 +4,21 @@ public class TicketSystem {
 
     private LinkedList<Ticket> cart;
     private Account activeAccount;
+
+    // TODO SHOULD loggedIn BE HERE OR IN ACCOUNT?
     private boolean loggedIn = false;
 
-    // TODO FILL STUFF OUT
+    // TODO SWITCH TO TRY CATCH
     public void checkUserPass(int cofcID, String password) {
+        boolean userQuery;
+        // query database and store result in variable userQuery
+            // if (userQuery == true) {
+                // logIn();
+            // }
+
+            // if (userQuery == false) {
+                // System.out.println("ACCOUNT NOT FOUND");
+            // }
 
     }
 
@@ -24,4 +35,14 @@ public class TicketSystem {
 
     }
 
+    private void setLoggedIn(boolean bool) {
+        this.loggedIn = bool;
+    }
+    private void logIn() {
+        setLoggedIn(true);
+    }
+
+    private void logOut() {
+        setLoggedIn(false);
+    }
 }
