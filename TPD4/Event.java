@@ -9,7 +9,7 @@ import java.util.Date;
  * <p></p>
  *
  **/
-public class Event {
+public class Event implements Comparable <Event> {
     private String eventType;
     private Date date;
     private String location;
@@ -22,4 +22,9 @@ public class Event {
         return this.date;
     }
 
+    //TODO
+    @Override
+    public int compareTo(Event o) {
+        return 0;
+    }
 }

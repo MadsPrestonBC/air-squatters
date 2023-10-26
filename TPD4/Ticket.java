@@ -1,5 +1,3 @@
-import java.util.Date;
-
 /**
  * Ticket is a class that contains the framework for a Ticket object. The ticket object contains information about
  * the price, the event, the seat, and the date, among other attributes. Ticket uses java.util.Date to provide the
@@ -26,10 +24,12 @@ public class Ticket implements Comparable <Ticket> {
     /**
      * boolean indicating if the seat is handicap accessible
      */
+    //TODO THIS SHOULD GO IN SEAT
     private boolean handicapAccessible;
     /**
      * boolean indicating if the ticket is available
      */
+    //TODO WHERE SHOULD THIS GO??
     private boolean available;
 
     /**
