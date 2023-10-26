@@ -60,4 +60,9 @@ public class Seat {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Seat " + this.seatNumber + this.section + " for $" + this.price;
+    }
 }
