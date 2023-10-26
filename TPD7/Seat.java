@@ -60,4 +60,13 @@ public class Seat {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    /**
+     * Overridden toString
+     * @return string representing the seat is
+     */
+    @Override
+    public String toString() {
+        return "Seat " + this.seatNumber + this.section + " for $" + this.price;
+    }
 }
