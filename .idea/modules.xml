@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ActualCode/ActualCode.iml" filepath="$PROJECT_DIR$/ActualCode/ActualCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TPD8/TPD8.iml" filepath="$PROJECT_DIR$/TPD8/TPD8.iml" />
       <module fileurl="file://$PROJECT_DIR$/air-squatters.iml" filepath="$PROJECT_DIR$/air-squatters.iml" />
     </modules>
   </component>
