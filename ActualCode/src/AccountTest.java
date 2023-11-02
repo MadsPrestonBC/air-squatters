@@ -36,9 +36,9 @@ public class AccountTest {
 
     public static boolean returnTrueIfEmailUpdated() {
         Account test = new Account(12345, "password", "clyde@cofc.edu");
-        test.setEmail("NewPassword");
+        test.setEmail("JohnDoe@cofc.edu");
 
-        if (test.getPassword() == "NewPassword") {
+        if (test.getEmail() == "JohnDoe@cofc.edu") {
             return true;
         } else {
             return false;
@@ -52,5 +52,7 @@ public class AccountTest {
     public static void main(String[] args) {
         System.out.println(returnTrueIfUserCreated());
         System.out.println(returnTrueIfUserNameUpdated());
+        System.out.println(returnTrueIfPasswordUpdated());
+        System.out.println(returnTrueIfEmailUpdated());
     }
 }
