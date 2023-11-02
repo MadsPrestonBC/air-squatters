@@ -2,7 +2,7 @@ public class AccountTest {
 
     public static boolean returnTrueIfUserCreated() {
         Account test = null;
-        test = new Account(12345, "user name", "password");
+        test = new Account(12345, "password", "clyde@cofc.edu");
 
         if (test != null) {
             return true;
@@ -13,17 +13,40 @@ public class AccountTest {
     }
 
     public static boolean returnTrueIfUserNameUpdated() {
-        Account test = new Account(12345, "user name", "password");
+        Account test = new Account(12345, "password", "clyde@cofc.edu");
         test.setCofcID(56789);
 
         if (test.getCofcID() == 56789) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
-
     }
+
+        public static boolean returnTrueIfPasswordUpdated() {
+            Account test = new Account(12345, "password", "clyde@cofc.edu");
+            test.setPassword("NewPassword");
+
+            if (test.getPassword() == "NewPassword") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+    public static boolean returnTrueIfEmailUpdated() {
+        Account test = new Account(12345, "password", "clyde@cofc.edu");
+        test.setEmail("NewPassword");
+
+        if (test.getPassword() == "NewPassword") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
 
 
     public static void main(String[] args) {
