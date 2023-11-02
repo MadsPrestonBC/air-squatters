@@ -35,13 +35,18 @@ public class SeatTest {
     }
 
     public static void main(String[] args) {
+        System.out.println("getSeat()");
         System.out.println(returnTrueIfgetSeatWorks());
+        System.out.println("getSection()");
         System.out.println(returnTrueIfgetSectionWorks());
+        System.out.println("getPrice()");
         System.out.println(returnTrueIfgetPriceWorks());
 
-
+        System.out.println("setSeat()");
         System.out.println(returnTrueIfsetSeatWorks());
+        System.out.println("setSection()");
         System.out.println(returnTrueIfsetSectionWorks());
+        System.out.println("setPrice()");
         System.out.println(returnTrueIfsetPriceWorks());
 
 
