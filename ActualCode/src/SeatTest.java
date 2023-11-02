@@ -2,15 +2,6 @@ public class SeatTest {
 
     public static boolean returnTrueIfgetSeatWorks() {
         Seat testSeat = new Seat();
-        if (testSeat.getSeatNumber() == 0) {
-            return true;
-        }
-        if (testSeat.getSection() == 'a') {
-            return true;
-        }
-        if (testSeat.getPrice() == 0.0) {
-            return true;
-        }        
         return testSeat.getSeatNumber() == 0;
     }
 
@@ -44,13 +35,18 @@ public class SeatTest {
     }
 
     public static void main(String[] args) {
+        System.out.print("getSeat(): ");
         System.out.println(returnTrueIfgetSeatWorks());
+        System.out.print("getSection(): ");
         System.out.println(returnTrueIfgetSectionWorks());
+        System.out.print("getPrice(): ");
         System.out.println(returnTrueIfgetPriceWorks());
 
-
+        System.out.print("setSeat(): ");
         System.out.println(returnTrueIfsetSeatWorks());
+        System.out.print("setSection(): ");
         System.out.println(returnTrueIfsetSectionWorks());
+        System.out.print("setPrice(): ");
         System.out.println(returnTrueIfsetPriceWorks());
 
 
