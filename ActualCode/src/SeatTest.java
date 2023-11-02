@@ -53,7 +53,7 @@ public class SeatTest {
     public static boolean returnTrueIfsetPriceWorks() {
         Seat testSeat = new Seat();
         testSeat.setPrice(100.0);
-        if (testSeat.getPrice() == 1000.0) {
+        if (testSeat.getPrice() == 100.0) {
             return true;
         }
         else {
