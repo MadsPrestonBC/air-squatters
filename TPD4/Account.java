@@ -98,14 +98,14 @@ class Account {
     public void setEmail(String email) {
         this.email = email;
     }
-
+    
     /*
      * @brief Prints tickets to the console and returns all tickets
      * @param n/a
      * @return tickets: a list of all tickets tied to the user
      */
 
-    public LinkedList<Ticket> getTickets() {
+     public LinkedList<Ticket> getTickets() {
         String[] ticketArray = new String[tickets.size()];
         for(int i = 0; i < ticketArray.length; i++) {
             ticketArray[i] = tickets.get(i).toString();
@@ -128,6 +128,6 @@ class Account {
 
     public static void main(String[] args) {
         Account first = new Account();
-        first.getTickets();
+        first.getTickets(); 
     }
 }
