@@ -12,6 +12,9 @@ public class SeatTest {
         if (testSeat.getPrice() == 0.0) {
             return true;
         }
+        else 
+            return false;
+        
     }
 
 }

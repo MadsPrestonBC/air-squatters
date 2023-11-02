@@ -22,4 +22,7 @@ public class Event {
         return this.date;
     }
 
+    public String getLocation() {
+        return this.location;
+    }
 }
