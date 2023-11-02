@@ -33,9 +33,13 @@ public class AccountTest {
 
 
     public static void main(String[] args) {
+        System.out.print("User Creation: ");
         System.out.println(returnTrueIfUserCreated());
+        System.out.print("Update Username: ");
         System.out.println(returnTrueIfUserNameUpdated());
+        System.out.print("Update Password: ");
         System.out.println(returnTrueIfPasswordUpdated());
+        System.out.print("Update Email: ");
         System.out.println(returnTrueIfEmailUpdated());
     }
 }
