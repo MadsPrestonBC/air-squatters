@@ -13,6 +13,18 @@ public class Seat {
      */
     private double price;
 
+    public Seat() {
+        this.seatNumber = 0;
+        this.section = 'a';
+        this.price = 0.0;
+    }
+
+    public Seat(int seatNumber, char section, double price) {
+        this.seatNumber = seatNumber;
+        this.section = section;
+        this.price = price;
+    }
+
     /**
      * returns the seat number of the seat
      * @return the seat number of the seat
