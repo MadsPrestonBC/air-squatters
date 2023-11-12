@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "system",
+        "TPD8/src",
+        "TPD7",
+        "TPD4",
+        "ActualCode/src",
+        "app/TicketSystem/src/main/java/local/airsquatters/TicketSystem"
+    ]
+}
