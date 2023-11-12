@@ -7,5 +7,6 @@
         "ActualCode/src",
         "app/TicketSystem/src/main/java/local/airsquatters/TicketSystem"
     ],
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

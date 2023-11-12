@@ -16,11 +16,7 @@ public class Ticket {
      */
     private Event event;
 
-    /**
-     * boolean indicating if the seat is handicap accessible
-     */
-    //TODO THIS SHOULD GO IN SEAT
-    private boolean handicapAccessible;
+    
     /**
      * boolean indicating if the ticket is available
      */
