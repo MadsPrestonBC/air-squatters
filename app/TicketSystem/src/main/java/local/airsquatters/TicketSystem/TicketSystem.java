@@ -17,7 +17,7 @@ public class TicketSystem {
     // TODO SHOULD loggedIn BE HERE OR IN ACCOUNT?
     private boolean loggedIn = false;
 
-    public static void main(String[] args) { SpringApplication.run(MoviesApplication.class, args); }
+    public static void main(String[] args) { SpringApplication.run(TicketSystem.class, args); }
 
     @GetMapping("/login")
 	public String apiRoot() {
