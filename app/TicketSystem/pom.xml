@@ -8,15 +8,25 @@
 		<version>3.1.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>local.air-squatters</groupId>
-	<artifactId>TicketSystem</artifactId>
+	<groupId>dev.jkeifer</groupId>
+	<artifactId>movies</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>TicketSystem</name>
-	<description>Ticketing System for CSCI 360</description>
+	<name>movies</name>
+	<description>Java API practice project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+		<dependency>
+    		<groupId>net.sourceforge.barbecue</groupId>
+    		<artifactId>barbecue</artifactId>
+    		<version>1.5-beta1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>

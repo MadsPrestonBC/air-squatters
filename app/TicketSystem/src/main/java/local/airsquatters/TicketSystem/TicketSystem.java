@@ -11,7 +11,7 @@ import java.util.LinkedList;
 @RestController
 public class TicketSystem {
 
-    private LinkedList<Ticket> cart;
+    private LinkedList<Seat> cart;
     private Account activeAccount;
 
     // TODO SHOULD loggedIn BE HERE OR IN ACCOUNT?
@@ -25,7 +25,7 @@ public class TicketSystem {
 	}
 
     // TODO SWITCH TO TRY CATCH
-    public void checkUserPass(int cofcID, String password) {
+    public void checkUserPass(Integer cofcID, String password) {
         boolean userQuery;
         // query database and store result in variable userQuery
             // if (userQuery == true) {
@@ -48,7 +48,7 @@ public class TicketSystem {
     }
     // TODO FILL STUFF OUT
     public void generateTickets() {
-
+        
     }
 
     private void setLoggedIn(boolean bool) {

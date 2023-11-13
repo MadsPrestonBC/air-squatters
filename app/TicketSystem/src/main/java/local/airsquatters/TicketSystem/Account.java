@@ -15,16 +15,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Account {
     @Id
-    private int cofcID;
+    private Integer cofcId;
     private String password;
     private String email;
     private LinkedList<Ticket> tickets;
 
-    public Account(int cofcID, String password, String email) {
-        cofcID = this.cofcID;
-        password = this.password;
-        email = this.email;
-        tickets = new LinkedList<Ticket>();
+    public Account(Integer cofcId, String password, String email) {
+        this.cofcId = cofcId;
+        this.password = password;
+        this.email = email;
+        this.tickets = new LinkedList<Ticket>();
     }
 
 }

@@ -15,7 +15,7 @@ public class EventService {
     }
 
     public Event singleEvent(String eventName) {
-        return eventRepository.findEventByEventEventName(eventName);
+        return eventRepository.findEventByEventName(eventName);
     }
     
 }

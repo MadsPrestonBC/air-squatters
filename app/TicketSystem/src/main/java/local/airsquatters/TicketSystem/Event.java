@@ -19,7 +19,9 @@ import java.util.*;
 public class Event {
 
     public enum EventType {
-        SPORTS, PLAY, CONCERT;
+        SPORTS, 
+        PLAY, 
+        CONCERT
     }
 
     @Id

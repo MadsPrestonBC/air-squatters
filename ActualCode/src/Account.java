@@ -12,7 +12,7 @@ import java.util.LinkedList;
  **/
 
 class Account {
-    private int cofcID;
+    private Integer cofcID;
     private String password;
     private String email;
     private LinkedList<Ticket> tickets;
@@ -32,7 +32,7 @@ class Account {
      * @return n/a
      */
 
-    public Account(int cofcID, String password, String email) {
+    public Account(Integer cofcID, String password, String email) {
         this.cofcID = cofcID;
         this.password = password;
         this.email = email;

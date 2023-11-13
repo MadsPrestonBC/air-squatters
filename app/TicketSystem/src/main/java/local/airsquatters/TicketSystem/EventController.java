@@ -1,6 +1,5 @@
 package local.airsquatters.TicketSystem;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +25,6 @@ public class EventController {
 
     @GetMapping("/{eventName}")
     public ResponseEntity<Event> getSingleEvent(@PathVariable String eventName) {
-        return new ResponseEntity<Event>(eventService.singleEvent(eventName)), HttpStatus.OK);
+        return new ResponseEntity<Event>(eventService.singleEvent(eventName), HttpStatus.OK);
     }
 }
