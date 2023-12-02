@@ -24,4 +24,9 @@ public class SeatService {
 
             return seat;
     }
+
+    // @Autowired
+    // public Seat sellSeat(String seatId){
+        
+    // }
 }
