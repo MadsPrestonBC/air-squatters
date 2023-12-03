@@ -8,5 +8,6 @@
         "app/TicketSystem/src/main/java/local/airsquatters/TicketSystem"
     ],
     "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "debug.javascript.autoAttachFilter": "always"
 }
